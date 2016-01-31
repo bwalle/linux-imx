@@ -1354,6 +1354,7 @@ static int sahara_register_algs(struct sahara_dev *dev)
 			goto err_aes_algs;
 	}
 
+#if 0
 	for (k = 0; k < ARRAY_SIZE(sha_v3_algs); k++) {
 		err = crypto_register_ahash(&sha_v3_algs[k]);
 		if (err)
@@ -1366,6 +1367,7 @@ static int sahara_register_algs(struct sahara_dev *dev)
 			if (err)
 				goto err_sha_v4_algs;
 		}
+#endif
 
 	return 0;
 
